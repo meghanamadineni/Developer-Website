@@ -1,0 +1,221 @@
+:host {
+  display: flex;
+  flex: 1;
+}
+
+.toolbarName{
+  font-family: gotham rounded,sans-serif;
+  font-weight:bold
+
+}
+mat-icon{
+  color:white;
+  font:bold;
+}
+
+.intense{
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  color:beige;
+  font-size:36px;
+  font-weight:bold;
+}
+
+.notIntense{
+  font-family: gotham rounded,sans-serif;
+  color:#fff;
+  font-size:18px;
+  font-weight:bold;
+}
+.content {
+  display: block;
+  padding: 0 px;
+  width: 80%;
+  min-width: 700px;
+  margin: 0 auto;
+}
+a.noDeco{
+  text-decoration:none;
+  color:white;
+  font:bold; 
+}
+a.noDecoLink{
+  text-decoration:none;
+  color:#678;
+}
+.intro{
+  text-align: center;
+}
+.dark-theme a.noDecoLink{
+  color:#ffffff;
+}
+
+
+.tableWidth{
+  width: inherit;
+}
+
+.statouter{
+  z-index: 10;
+  position: fixed;
+  right: 30px;
+  top:10px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #212121;
+  border: 0.5px dashed #fff;
+}
+.stat{
+  z-index: 10;
+  position: fixed;
+  right: 40px;
+  top:20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+}
+.tableWidth1{
+  width: inherit;
+  margin: auto;
+  height: 100vh;
+}
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  width: 600px;
+  word-wrap: break-word;
+  text-align: center;
+}
+p.size{
+  width:auto;
+  text-align:justify
+}
+.block{
+   width: 600px;
+  margin: auto;
+  display: block;
+  position: relative;
+
+}
+
+.outer{
+  margin: auto auto;
+  display: block;
+  position: relative;
+}
+.fab-bottom-right {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+}
+
+.subheading{
+  font-family: Helvetica Narrow;
+  font-stretch:narrower;
+  font-size:24px;
+  letter-spacing: 0px;
+  margin-right:5px;
+}
+.git-icon{
+  margin-left: 5px;margin-right: 5px;
+}
+.tp-wrapper {
+  perspective: 800px;
+}
+
+.tp-box {
+  position: relative;
+  
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.tp-box__side {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  color: #fff;
+  user-select: none;
+}
+.tp-box__front {
+  cursor: pointer;
+  background: #FF5252;
+}
+.tp-box__back {
+  background: #fff;
+  transform: rotateY(179.9deg);
+}
+
+
+.mat-toolbar{
+  background:#212121;
+}
+
+
+
+.aboutme{
+  width:inherit;text-align:left;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  color:beige;
+   font-size: 20px;
+}
+.aboutme1{
+  width:inherit;text-align:left;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  color:beige;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-github{
+  background: #000;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-envelope{
+  background: rgb(35, 135, 211);
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+

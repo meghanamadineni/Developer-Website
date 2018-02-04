@@ -1,0 +1,161 @@
+@import '~@angular/material/theming';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+@include mat-core();
+$mat-coral: (
+    50 : #ffeaea,
+    100 : #ffcbcb,
+    200 : #ffa9a9,
+    300 : #ff8686,
+    400 : #ff6c6c,
+    500 : #ff5252,
+    600 : #ff4b4b,
+    700 : #ff4141,
+    800 : #ff3838,
+    900 : #ff2828,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffd5d5,
+    A700 : #ffbcbc,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$mat-white: (
+  50 : #ffffff,
+  100 : #ffffff,
+  200 : #ffffff,
+  300 : #ffffff,
+  400 : #ffffff,
+  500 : #ffffff,
+  600 : #ffffff,
+  700 : #ffffff,
+  800 : #ffffff,
+  900 : #ffffff,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffffff,
+  A700 : #ffffff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #000000,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+
+$mat-dark-pink: (
+  50 : #f8e3eb,
+  100 : #edbace,
+  200 : #e18cad,
+  300 : #d45d8c,
+  400 : #cb3b74,
+  500 : #c2185b,
+  600 : #bc1553,
+  700 : #b41149,
+  800 : #ac0e40,
+  900 : #9f082f,
+  A100 : #ffcbd6,
+  A200 : #ff98ad,
+  A400 : #ff6585,
+  A700 : #ff4c71,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+
+$mat-pink: (
+  50 : #fce4ec,
+  100 : #f8bcd0,
+  200 : #f48fb1,
+  300 : #f06292,
+  400 : #ec407a,
+  500 : #e91e63,
+  600 : #e61a5b,
+  700 : #e31651,
+  800 : #df1247,
+  900 : #d90a35,
+  A100 : #ffffff,
+  A200 : #ffd0d8,
+  A400 : #ff9dae,
+  A700 : #ff8498,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+
+
+
+$primary: mat-palette($mat-coral);
+$accent: mat-palette($mat-coral);
+$warn:mat-palette($mat-coral);
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+
+
+
+.dark-theme {
+  $dark-primary: mat-palette($mat-light-blue);
+  $dark-accent: mat-palette($mat-light-blue);
+  $dark-warn:mat-palette($mat-white);
+  $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+  @include angular-material-theme($dark-theme);
+  
+  }
+

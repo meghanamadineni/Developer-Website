@@ -1,0 +1,153 @@
+<div fxLayout="column" fxFlex>
+  <mat-toolbar>
+    <img [src]="bg" style="height:inherit;" />
+    <span fxFlex></span>
+    <button mat-icon-button mat-tooltip='Home' tooltip-position='below'>
+      <mat-icon>
+        <a class="noDeco" href="#home">home</a>
+      </mat-icon>
+    </button>
+    <button mat-icon-button mat-tooltip='Work' tooltip-position='below'>
+      <mat-icon>
+        <a class="noDeco" href="#work">work</a>
+      </mat-icon>
+    </button>
+    <button mat-icon-button mat-tooltip='Contact' tooltip-position='below'>
+      <mat-icon>
+        <a class="noDeco" href="#contactMe">message </a>
+      </mat-icon>
+    </button>
+    <button mat-icon-button mat-tooltip='Resume' tooltip-position='below'>
+      <mat-icon>
+        <a class="noDeco" download="meghana_resume.pdf" [href]="filePath">file_download </a>
+      </mat-icon>
+    </button>
+
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlex style="background-color: #212121;">
+
+    <div class="content" fxLayoutGap="16px" layout-align="center center" fxFlexAlign="center center">
+
+      <mat-card id="home" style="background-color: #212121;margin-top:0px;padding:0px" fxFlex="100" class="outer" layout-align="center center">
+
+        <mat-card style="padding:0px;background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./assets/bg.jpeg');background-size: 100% 100%;height:100%;margin-bottom:20px;min-height:500px;">
+          <table class="tableWidth1">
+            <tr>
+              <td>
+                <div style=" width: 400px;height: 200px;"></div>
+              </td>
+              <td style="padding: 10px;width:500px">
+                <p class="size intense " style="color: #fff">
+                  <span typingAnimation [typeSpeed]="100" [startDelay]="2000" (complete)="onComplete()">Hello.</span>
+                </p>
+                <p class="size aboutme" style="color: #fff">
+                  <span typingAnimation [typeSpeed]="100" [condition]="strt">Keep scrolling for a little about me.</span>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </mat-card>
+        <mat-card id="work" style="padding:0px;background-color:#FFC107;height:90vh;min-height:500px;margin-top:20px">
+          <div fxFlex fxLayoutGap="40px" fxLayout="row">
+            <div fxFlex=40 class="w3-content w3-section" style="height:100%;min-width:400px">
+              <img style="opacity:0;height: 0; width:0;margin:auto" id="1" src="./assets/a1.png">
+              <img style="opacity:0;height: 0; width:0;margin:auto" id="2" src="./assets/a2.png">
+              <img style="opacity:0;height: 0; width:0;margin:auto" id="3" src="./assets/a6.png">
+              <img style="opacity:0;height: 0; width:0;margin:auto" id="4" src="./assets/a4.png">
+              <img style="opacity:0;height: 0; width:0;margin:auto" id="5" src="./assets/a5.png">
+              <img style="opacity:0;height: 0; width:0;margin:auto" id="6" src="./assets/a3.png">
+            </div>
+            <div fxFlex=50 style="display: table; height: 100%; overflow: hidden;">
+              <div style="height:100%;display: table-cell; vertical-align: middle;">
+                <div style="width:100%;text-align:center;color:black" class="aboutme">{{intro}}</div>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+        <mat-card style="padding:0px;background-color:indianred;height:90vh;min-height:500px;margin-top:15px;">
+          <div fxFlex fxLayout="row" fxLayoutGap="20px">
+
+            <div fxFlex="70" style="display: table; height: 100%; overflow: hidden;padding-left:40px;">
+              <ul style="color:beige;height:100%;display: table-cell; vertical-align: middle;padding:30px">
+                <li>
+                  <p class="aboutme">I received my Bachelors of Technology in Computer Science from VNR VJIET. </p>
+                </li>
+                <li>
+                  <p class=" aboutme">I worked for two years as a Software developer at CA Technologies, Hyderabad.</p>
+                </li>
+                <li>
+                  <p class="aboutme">In 2016, I moved to Gainesville, Florida, United States.</p>
+                </li>
+                <li>
+                  <p class="aboutme">Currently I'm pursuing Masters in Computer Science at University of Florida and will be graduating in May,
+                    2018.</p>
+                </li>
+                <li style="list-style: none;padding-top:10px">
+                  <p class="aboutme1">I'm looking for a challenging, career oriented full-time position with a progressive company. Please download
+                    my resume from the toolbar.</p>
+                </li>
+              </ul>
+            </div>
+            <div style="padding:10px;margin:10px">
+              <div style="margin-top:40px;height:120px;width:120px;border-radius:50%;background-image:url('./assets/vnr.png');background-size: 120px 120px;"></div>
+              <div style="margin-left:60px;height:160px;width:160px;border-radius:50%;background-image:url('./assets/catrans.png');background-size: 160px 160px;"></div>
+              <div style="margin-right:40px;margin-bottom:10px;height:140px;width:140px;border-radius:50%;background-image:url('./assets/UF1.png');background-size: 140px 140px;"></div>
+            </div>
+          </div>
+        </mat-card>
+        <mat-card id="contactMe" style="padding:0px;background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./assets/c.jpg');background-size: 100% 100%;height:90vh;min-height:500px;margin-top:20px">
+          <div class="tp-wrapper" style="width: 500px;height: 400px; display: table-cell;vertical-align: middle; margin: auto 0;" fxFlex="100">
+            <div class="tp-box" [@flipState]="flip" style=" height:100%;margin-top:0px;width:500px">
+              <mat-card style="height:400px ;padding:0px" class="tp-box__side tp-box__front" (click)="toggleFlip()">
+                <div style="width: 500px;height: 400px; display: table-cell;vertical-align: middle; margin: auto 0;">
+                  <p style="width:inherit;margin: auto auto;top:50%">
+                    <b>Click to talk!</b>
+                  </p>
+                </div>
+              </mat-card>
+              <mat-card style="height:400px;" class="tp-box__side tp-box__back">
+                <form class="top" #form="ngForm" (ngSubmit)="submit(form.value);form.reset()" ngNativeValidate>
+                  <div class="top" fxLayout="column" fxLayoutGap="8px">
+                    <div fxLayout="column" fxLayoutAlign="space-evenly stretch">
+                      <mat-form-field>
+                        <input style="color: #212121;" size="150px" matInput ngModel name="name" placeholder="Full name" required>
+                      </mat-form-field>
+                      <mat-form-field>
+                        <input style="color: #212121;" matInput ngModel name="email" placeholder="Email address" required>
+                      </mat-form-field>
+                      <mat-form-field>
+                        <textarea style="color: #212121;" matInput ngModel name="message" placeholder="Message" rows="5" cols="60" required></textarea>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div style="margin-top:30px" align="end">
+                    <button mat-button type="button" (click)="form.reset();toggleFlip()">
+                      <b>
+                        <span style="color: #616161">Cancel</span>
+                      </b>
+                    </button>
+                    <button mat-button color=accent>
+                      <b>
+                        <span style="color: #FF5252">Send</span>
+                      </b>
+                    </button>
+                  </div>
+                </form>
+              </mat-card>
+            </div>
+          </div>
+        </mat-card>
+      </mat-card>
+    </div>
+    <div style="width:410px;margin:40px auto">
+      <a target="_blank" href="https://www.facebook.com/meghanamadineni" class="fa fa-facebook"></a>
+      <a target="_blank" href="https://github.com/meghanamadineni" class="fa fa-twitter"></a>
+      <a target="_blank" href="https://plus.google.com/u/0/112716318527369936841" class="fa fa-google"></a>
+      <a target="_blank" href="https://linkedin.com/in/meghanamadineni" class="fa fa-linkedin"></a>
+      <a href="mailto:meghaname@ufl.edu" class="fa fa-envelope"></a>
+      <a target="_blank" href="https://www.instagram.com/meghana_madineni/" class="fa fa-instagram"></a>
+      <a target="_blank" href="https://github.com/meghanamadineni" class="fa fa-github"></a>
+    </div>
+  </mat-sidenav-container>
+</div>
